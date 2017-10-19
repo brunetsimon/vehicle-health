@@ -1,0 +1,15 @@
+React
+------------
+yarn init
+yarn start
+
+Git
+------------
+git add .
+git commit -m "message"
+git push -u origin master
+
+
+Dashboard theme
+------------
+http://eliteadmin.themedesigner.in/demos/eliteadmin-horizontal-nav-fullwidth/
