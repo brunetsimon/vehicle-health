@@ -9,7 +9,15 @@ git add .
 git commit -m "message"
 git push -u origin master
 
+Deploy
+------------------
+yarn build
+firebase deploy
 
 Dashboard theme
 ------------
 http://eliteadmin.themedesigner.in/demos/eliteadmin-horizontal-nav-fullwidth/
+
+Firebase article
+---------------
+https://www.codementor.io/yurio/all-you-need-is-react-firebase-4v7g9p4kf
