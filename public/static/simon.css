@@ -1,0 +1,13 @@
+#wrapper {
+  box-shadow: none;
+}
+.login-register {
+    background: url(http://www.goteborgelectricity.se/sites/default/files/content/bilder/volvo_7900_electric_hybrid_restaurant.jpg) center center/cover no-repeat!important;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.table .material-icons {
+  cursor: pointer;
+}
