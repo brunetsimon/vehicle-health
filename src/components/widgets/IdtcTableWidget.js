@@ -8,7 +8,7 @@ class IdtcTableWidget extends React.Component {
     this.state = {
       idtcs: []
     };
-    this.handleRemoveIdtc = this.handleRemoveIdtc.bind(this);
+  //  this.handleRemoveIdtc = this.handleRemoveIdtc.bind(this);
   }
 
   componentWillMount() {
@@ -25,11 +25,18 @@ class IdtcTableWidget extends React.Component {
       let idtc = { spn: snapshot.val().spn, ftb: snapshot.val().ftb, time: snapshot.val().time, id: snapshot.key};
       this.setState({ idtcs: [idtc].concat(this.state.idtcs)});
     });
+
+    idtcRef.on('child_removed', snapshot => {
+      console.log("child_removed");
+      let newIdtcs = this.state.idtcs.filter( x => x.id !== snapshot.key);
+      this.setState({ idtcs: newIdtcs});
+    })
   }
 
   handleRemoveIdtc(idtc) {
-    console.log(idtc);
-    //db.ref('idtc').child(idtc.id).remove();
+    console.log("remove " + idtc.id);
+
+    db.ref('idtc').child(idtc.id).remove();
   }
   render() {
 
@@ -52,7 +59,7 @@ class IdtcTableWidget extends React.Component {
                      <td>{idtc.spn}</td>
                      <td>{idtc.ftb}</td>
                      <td>{idtc.time}</td>
-                     <td><i className="material-icons" onClick={this.handleRemoveIdtc(idtc)}>delete</i></td>
+                     <td><i className="material-icons" onClick={(e) =>this.handleRemoveIdtc(idtc, e)}>delete</i></td>
                   </tr>
                  )}
                </tbody>
