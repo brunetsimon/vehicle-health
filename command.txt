@@ -1,6 +1,6 @@
 React stuff
 ------------
-yarn init
+(yarn init)
 yarn start
 
 Git
