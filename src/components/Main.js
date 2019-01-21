@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import DashboardPage from './DashboardPage'
 import AuthPage from './AuthPage';
+import FakeData from './FakeData';
 import { auth } from '../fire';
 
 class Main extends React.Component {
@@ -38,6 +39,7 @@ class Main extends React.Component {
         <Switch>
           {/* <Redirect from="/" to ="/dashboard"/> */}
           <PrivateRoute authed={this.state.authed} path="/dashboard" component={DashboardPage} />
+          <PrivateRoute authed={this.state.authed} path="/fake" component={FakeData} />
           <Route path="/login" component={AuthPage} />
         </Switch>
       </main>

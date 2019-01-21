@@ -34,7 +34,7 @@ class SocChartWidget extends React.Component {
       <div className="row">
         <div className="col-lg-12">
           <div className="white-box">
-            <AreaChart width={600} height={400} data={this.state.socs} margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+            <AreaChart width={600} height={400} data={this.state.socs.reverse()} margin={{top: 10, right: 30, left: 0, bottom: 0}}>
               <CartesianGrid strokeDasharray="3 3"/>
               <XAxis dataKey="time"/>
               <YAxis/>
