@@ -64,7 +64,7 @@ class IdtcMapWidget extends React.Component {
             <MyMap
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFXE_147liJxm8DIRxaK60SC1mVEN8n8Y&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
+              containerElement={<div style={{ height: `600px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
               markerLat = {this.state.lastPosition.lat}
               markerLng = {this.state.lastPosition.lng}

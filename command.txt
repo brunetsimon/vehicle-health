@@ -25,5 +25,5 @@ https://www.codementor.io/yurio/all-you-need-is-react-firebase-4v7g9p4kf
 
 login
 --------------
-email: sbrunet3@gmail.com
+email: test@gmail.com
 password: abc123

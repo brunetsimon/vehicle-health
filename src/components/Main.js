@@ -7,6 +7,7 @@ import { auth } from '../fire';
 class Main extends React.Component {
   state = {
     authed: false,
+    loading: true
   }
 
   componentDidMount() {
@@ -14,10 +15,12 @@ class Main extends React.Component {
       if (user) {
         this.setState({
           authed: true,
+          loading: false,
         });
       } else {
         this.setState({
           authed: false,
+          loading: false,
         });
       }
     });
@@ -26,6 +29,10 @@ class Main extends React.Component {
     this.removeListener()
   }
   render() {
+
+    if(this.state.loading) {
+      return (<p>Loading</p>);
+    }
     return (
       <main>
         <Switch>
