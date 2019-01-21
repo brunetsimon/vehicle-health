@@ -15,7 +15,7 @@ const Navbar = () => (
       <ul className="nav navbar-top-links navbar-right pull-right">
         <li className="right-side-toggle">
           <Link to='/' className="waves-effect waves-light">
-            <span>Sign Out</span>
+            <span>Dummy</span>
           </Link>
         </li>
       </ul>

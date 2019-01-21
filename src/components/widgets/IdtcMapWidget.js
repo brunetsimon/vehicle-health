@@ -39,17 +39,21 @@ class IdtcMapWidget extends React.Component {
       lastPosition: {},
     };
 
-  }
+  } 
 
   componentWillMount() {
-    let gpsRef = db.ref('gps');
+    this.gpsRef = db.ref('gps');
 
-    gpsRef.on('child_added', snapshot => {
+    this.gpsRef.on('child_added', snapshot => {
       console.log("child_added");
       let gps = { lat: snapshot.val().lat, lng: snapshot.val().lng, id: snapshot.key};
       this.setState({ lastPosition: gps});
     });
 
+  }
+
+  componentWillUnmount() {
+    this.gpsRef.off();
   }
 
   render() {
@@ -58,7 +62,7 @@ class IdtcMapWidget extends React.Component {
         <div className="col-lg-12">
           <div className="white-box">
             <MyMap
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCujXXHh95WEtYr-6ua1Xjy5oCEgPiWGik&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFXE_147liJxm8DIRxaK60SC1mVEN8n8Y&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
