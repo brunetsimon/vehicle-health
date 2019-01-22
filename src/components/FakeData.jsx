@@ -51,12 +51,30 @@ class FakeData extends Component {
 
   render() {
 
-    const { classes } = this.props;
     return(
-      <div>
-        <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleIdtcClick}>IDTC</button>
-        <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleGpsClick}>GPS</button>
-        <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleSocClick}>SOC</button>
+      <div id="page-wrapper">
+        <div className="container-fluid">
+          <div className="row bg-title">
+            <h1>Generate fake data</h1>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="white-box">
+                <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleIdtcClick}>IDTC</button>
+              </div>
+            </div>
+            <div className="col-md-12">
+              <div className="white-box">
+                <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleGpsClick}>GPS</button>
+              </div>
+            </div>
+            <div className="col-md-12">
+              <div className="white-box">
+                <button className="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" onClick={this.handleSocClick}>SOC</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
